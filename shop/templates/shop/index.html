@@ -1,24 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta name="viewport" content="width=device-width" />
     <title>Товары</title>
 </head>
 <body>
     <div>
-        <h3>Список</h3>
-        <table>
+        <h3>Магазин канцелярских товаров</h3>
+        <table border="1" cellpadding="5" cellspacing="0">
             <tr>
-                <td><p>Наименование</p></td>
-                <td><p>Цена</p></td>
-                <td></td>
+                <th>Наименование</th>
+                <th>Цена</th>
+                <th></th>
             </tr>
             {% for p in products %}
-                <tr>
-                    <td><p>{{ p.name }}</p></td>
-                    <td><p>{{ p.price }}</p></td>
-                    <td><p><a href="/buy/{{ p.id }}">Купить</a></p></td>
-                </tr>
+            <tr>
+                <td>{{ p.name }}</td>
+                <td>{{ p.price }}</td>
+                <td><a href="{% url 'buy' p.id %}">Купить</a></td>
+            </tr>
             {% endfor %}
         </table>
     </div>

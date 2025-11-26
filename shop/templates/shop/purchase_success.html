@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Покупка успешно оформлена</title>
+</head>
+<body>
+    <h3>Спасибо за покупку, {{ person }}!</h3>
+    {% if discount_status %}
+        <p style="color: green; font-weight: bold;">
+            Применена скидка 10%! Поздравляем вас с днём рождения.
+        </p>
+    {% endif %}
+    <p>Итоговая цена: {{ price }} руб.</p>
+    <p><a href="{% url 'index' %}">На главную</a></p>
+</body>
+</html>
