@@ -1,10 +1,9 @@
 from django.test import TestCase
 from shop.models import Product, Purchase
-from datetime import date, datetime, timedelta
+from datetime import datetime, date
 
 class ProductModelTests(TestCase):
     """Тесты для модели Product"""
-
     def setUp(self):
         """Создание нескольких товаров для тестов"""
         Product.objects.create(name="Книга", price=740)
