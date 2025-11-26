@@ -1,15 +1,25 @@
 - model: shop.product
   pk: 1
   fields:
-    name: Стол
-    price: 2000
+    name: Карандаш
+    price: 500
 - model: shop.product
   pk: 2
   fields:
-    name: Стул
+    name: Ручка
     price: 1000
 - model: shop.product
   pk: 3
   fields:
-    name: Табурет
-    price: 500
+    name: Линейка
+    price: 200
+- model: shop.product
+  pk: 4
+  fields:
+    name: Ножницы
+    price: 600
+- model: shop.product
+  pk: 5
+  fields:
+    name: Циркуль
+    price: 800
