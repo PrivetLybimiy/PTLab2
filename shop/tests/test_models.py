@@ -1,6 +1,6 @@
 from django.test import TestCase
 from shop.models import Product, Purchase
-from datetime import datetime
+from datetime import datetime, date
 
 class ProductTestCase(TestCase):
     def setUp(self):
@@ -24,7 +24,8 @@ class PurchaseTestCase(TestCase):
         self.datetime = datetime.now()
         Purchase.objects.create(product=self.product_book,
                                 person="Ivanov",
-                                address="Svetlaya St.")
+                                address="Svetlaya St.",
+                                birthday=date.today())
 
     def test_correctness_types(self):
         self.assertIsInstance(Purchase.objects.get(product=self.product_book).person, str)
